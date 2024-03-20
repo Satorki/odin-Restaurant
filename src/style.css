@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #123456;
+    width: 100%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.h-left {
+    display: flex;
+    padding: 10px;
+}
+.h-right {
+    display: flex;
+    padding: 10px;;
+}
+.h-right nav {
+    margin: 0 20px;
+}
+.big-picture {
+    text-align: center;
+    height: 400px;
+    overflow: hidden;
+}
+.big-picture img {
+    max-width: 100%;
+    height: auto;
+}
+h1, .title {
+    position: absolute;
+    left: 20%;
+}
+h1 {
+    top: 170px;
+}
+.title {
+    top: 250px;
+}
+.div-box {
+    display: flex;
+}
