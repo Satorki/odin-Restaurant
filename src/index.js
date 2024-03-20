@@ -1,15 +1,17 @@
 import "./style.css";
-import { contentMain } from "./domMain.js";
+import { mainTitle, contentMain } from "./domMain.js";
 import { contentMenu } from "./domMenu.js";
 
 const main = document.querySelector("#main");
 const menu = document.querySelector("#menu");
 const cont = document.querySelector("#cont");
 
+document.addEventListener("DOMContentLoaded", function () {
+  mainTitle();
+});
 
 main.addEventListener("click", () => {
   contentMain();
-  
 });
 
 menu.addEventListener("click", () => {
