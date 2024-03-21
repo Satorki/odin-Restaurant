@@ -1,14 +1,21 @@
 function contentMenu() {
-    const contentDiv = document.querySelector("#content");
-    const divBox = document.createElement("div");
-    divBox.classList.add("div-box")
-    contentDiv.appendChild(divBox)
-    
-    const p2 = document.createElement("p");
-    p2.textContent =
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facere sint porro, blanditiis repudiandae molestias possimus doloribus dolor illo aliquam ut quam adipisci consequuntur, excepturi, modi quas laboriosam delectus eos?";
-    divBox.appendChild(p2);
-  
-  }
+  const navMain = document.querySelector("#menu");
+  navMain.classList.add("navActive");
+  document.classList.remove("navActive")
 
-  export { contentMenu }
+  const contentDiv = document.querySelector("#content");
+
+  if (!contentDiv.querySelector(".menu")) {
+    const divMenu = document.createElement("div");
+    divMenu.classList.add("center", "menu");
+    contentDiv.appendChild(divMenu);
+
+    const p = document.createElement("p");
+    p.textContent =
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facere sint porro, blanditiis repudiandae molestias possimus doloribus dolor illo aliquam ut quam adipisci consequuntur, excepturi, modi quas laboriosam delectus eos?";
+    divMenu.appendChild(p);
+  }
+}
+
+
+export { contentMenu };

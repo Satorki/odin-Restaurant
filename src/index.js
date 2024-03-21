@@ -1,13 +1,15 @@
 import "./style.css";
-import { mainTitle, contentMain } from "./domMain.js";
+import { mainTitle, contentMain, clear } from "./domMain.js";
 import { contentMenu } from "./domMenu.js";
+import { contentContact } from "./domContact.js";
 
 const main = document.querySelector("#main");
 const menu = document.querySelector("#menu");
-const cont = document.querySelector("#cont");
+const cont = document.querySelector("#contact");
 
 document.addEventListener("DOMContentLoaded", function () {
   mainTitle();
+  contentMain();
 });
 
 main.addEventListener("click", () => {
@@ -16,10 +18,10 @@ main.addEventListener("click", () => {
 
 menu.addEventListener("click", () => {
   contentMenu();
+  console.log(contentMain());
+  clear(contentMain());
 });
 
 cont.addEventListener("click", () => {
   contentContact();
 });
-
-console.log("empty");
