@@ -36,13 +36,14 @@ function contentMain() {
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facere sint porro, blanditiis repudiandae molestias possimus doloribus dolor illo aliquam ut quam adipisci consequuntur, excepturi, modi quas laboriosam delectus eos?";
     divMain.appendChild(p);
   }
+
   return divMain;
 }
 
 function clear(element) {
-  if (element) {
-    element.remove();  
-  }
+    element.remove();
 }
+
+
 
 export { mainTitle, contentMain, clear };

@@ -17,9 +17,7 @@ main.addEventListener("click", () => {
 });
 
 menu.addEventListener("click", () => {
-  contentMenu();
-  console.log(contentMain());
-  clear(contentMain());
+  clear(document.querySelector(".main"));
 });
 
 cont.addEventListener("click", () => {
