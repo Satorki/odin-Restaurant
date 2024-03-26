@@ -57,19 +57,23 @@ function clickBehaviours() {
       const menuItem = GenerateMenuItem();
       menuItem.createItem(
         "Valkyrie's Feast",
-        "A grand platter featuring a selection of roasted meats, including tender lamb, juicy pork, and savory venison, served alongside roasted root vegetables and honey-glazed mead ham.", "/src/dish1.jpg"
+        "A grand platter featuring a selection of roasted meats, including tender lamb, juicy pork, and savory venison, served alongside roasted root vegetables and honey-glazed mead ham.",
+        "./src/dish1.jpg"
       );
       menuItem.createItem(
         "Thor's Thunderous Stew",
-        "A hearty stew bursting with chunks of beef, root vegetables, and barley, simmered in a rich broth flavored with herbs and spices.", "/src/dish2.jpg"
+        "A hearty stew bursting with chunks of beef, root vegetables, and barley, simmered in a rich broth flavored with herbs and spices.",
+        "./src/dish2.jpg"
       );
       menuItem.createItem(
         "Loki's Lox Platter",
-        "Smoked salmon served with pickled herring, crisp rye bread, and creamy horseradish sauce, perfect for indulging in the bounty of the sea.", "/src/dish3.jpg"
+        "Smoked salmon served with pickled herring, crisp rye bread, and creamy horseradish sauce, perfect for indulging in the bounty of the sea.",
+        "./src/dish3.jpg"
       );
       menuItem.createItem(
         "Freyja's Harvest Salad",
-        "A refreshing salad featuring crisp greens, seasonal vegetables, toasted nuts, and tangy vinaigrette, paying homage to the fertility goddess Freyja.", "/src/dish4.jpg"
+        "A refreshing salad featuring crisp greens, seasonal vegetables, toasted nuts, and tangy vinaigrette, paying homage to the fertility goddess Freyja.",
+        "./src/dish4.jpg"
       );
       preventRepeat.menu = 0;
       preventRepeat.main = 1;
