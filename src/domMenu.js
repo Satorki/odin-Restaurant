@@ -1,20 +1,57 @@
-function contentMenu() {
-  const navMain = document.querySelector("#main");
-  navMain.classList.add("navActive");
-  const contentDiv = document.querySelector("#content");
+function generateMenu() {
+  const selectors = {
+    contentDiv: document.querySelector("#content"),
+    navMenu: document.querySelector("#menu"),
+  };
 
-  let divMain;
+  const elements = {
+    div: document.createElement("div"),
+  };
 
-  if (!contentDiv.querySelector(".main")) {
-    divMain = document.createElement("div");
-    divMain.classList.add("center", "main");
-    contentDiv.appendChild(divMain);
+  const addClasses = () => {
+    elements.div.classList.add("center", "menu");
+    selectors.navMenu.classList.add("navActive");
+  };
 
-    const p = document.createElement("p");
-    p.textContent =
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facere sint porro, blanditiis repudiandae molestias possimus doloribus dolor illo aliquam ut quam adipisci consequuntur, excepturi, modi quas laboriosam delectus eos?";
-    divMain.appendChild(p);
-  }
+  const createMenu = () => {
+    selectors.contentDiv.appendChild(elements.div);
+  };
+
+  addClasses();
+  createMenu();
 }
 
-export { contentMenu };
+function GenerateMenuItem() {
+  const selectors = {
+    menu: document.querySelector(".menu"),
+  };
+
+  const addClasses = (div) => {
+    div.classList.add("box");
+  };
+
+  const addText = (div, title, description, imgSrc) => {
+    const elements = {
+      h: document.createElement("h2"),
+      p: document.createElement("p"),
+      img: document.createElement("img")
+    };
+    elements.h.textContent = title;
+    elements.p.textContent = description;
+    elements.img.src = imgSrc;
+    div.appendChild(elements.h);
+    div.appendChild(elements.img);
+    div.appendChild(elements.p);
+  };
+
+  const createItem = (title, description, imgSrc) => {
+    const div = document.createElement("div");
+    addClasses(div);
+    addText(div, title, description, imgSrc);
+    selectors.menu.appendChild(div);
+  };
+
+  return { createItem };
+}
+
+export { generateMenu, GenerateMenuItem };
