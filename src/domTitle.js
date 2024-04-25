@@ -14,7 +14,7 @@ function GenerateTitle() {
   };
 
   const addPicture = () => {
-    elements.img.src = "src/big-picture.jpg";
+    elements.img.src = "../src/big-picture.jpg";
   };
 
   const addText = (h1Text, pText) => {
@@ -38,7 +38,9 @@ function GenerateTitle() {
 
 function clearContent() {
   document.querySelector(".center").remove();
-  document.querySelectorAll(".navActive").forEach(element => element.classList.remove("navActive"))
+  document
+    .querySelectorAll(".navActive")
+    .forEach((element) => element.classList.remove("navActive"));
 }
 
 export { GenerateTitle, clearContent };
