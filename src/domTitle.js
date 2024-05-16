@@ -14,7 +14,7 @@ function GenerateTitle() {
   };
 
   const addPicture = () => {
-    elements.img.src = "src/big-picture.jpg";
+    elements.img.src = "../src/big-picture.jpg";
   };
 
   const addText = (h1Text, pText) => {
